@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="create_account_title">Create Account</string>
+    <string name="create_account_subtitle">Create a new account</string>
+    <string name="back_button_desc">Back button</string>
+    <string name="profile_picture_desc">Profile picture placeholder</string>
+    <string name="camera_button_desc">Camera icon button</string>
+    <string name="name_hint">Name</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="confirm_password_hint">Confirm Password</string>
+    <string name="create_account_button">Create Account</string>
+</resources>
