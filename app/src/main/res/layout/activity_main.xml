@@ -1,14 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    android:background="@drawable/backgroundimage"
-
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:weightSum="10"
     tools:context=".MainActivity">
 
+    <!-- Section 1: Top Bar -->
+    <LinearLayout
+        android:id="@+id/section1_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:background="@color/white"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Middle logo -->
+
+    <LinearLayout
+        android:id="@+id/section2_midLogo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/socially_logo"
+            android:background="@color/white"/>
+
+    </LinearLayout>
+
+    <!-- For bottom logo -->
+
+
+    <LinearLayout
+        android:id="@+id/section2_BottomLogo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <!-- Bottom logo -->
+        <ImageView
+            android:id="@+id/B_logo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/smd_splash"
+            android:background="@color/white"/>
+        <!-- Put back button, title, search etc here -->
+    </LinearLayout>
+
+
+    <!-- For Final cursor -->
+
+
+    <LinearLayout
+        android:id="@+id/section2_Cursor"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:gravity="center">
+
+    </LinearLayout>
+
+</LinearLayout>
