@@ -1,9 +1,49 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+
+    <!-- Base application theme -->
     <style name="Base.Theme.I221285" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
+        <!-- Customize your light theme here -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
     <style name="Theme.I221285" parent="Base.Theme.I221285" />
+
+    <!-- Reusable styles -->
+    <style name="PostActionIcon">
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_marginEnd">10dp</item>
+        <item name="android:tint">@color/text_color</item>
+    </style>
+
+    <style name="StoryItem">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_marginEnd">16dp</item>
+    </style>
+
+    <style name="StoryImage">
+        <item name="android:layout_width">70dp</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="civ_border_width">3dp</item>
+    </style>
+
+    <style name="StoryText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="CustomBottomNav" parent="Widget.Material3.BottomNavigationView">
+        <item name="android:layout_height">48dp</item>
+        <item name="itemIconSize">28dp</item>
+        <item name="itemPaddingTop">0dp</item>
+        <item name="itemPaddingBottom">0dp</item>
+    </style>
+
+
 </resources>

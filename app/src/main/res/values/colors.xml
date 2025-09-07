@@ -13,4 +13,8 @@
     <color name="text_color">#9B5E63</color>
     <color name="text_hint_color">#9B9393</color>
 
+    <color name="gray">#A0A0A0</color>
+    <color name="story_border_start">#F28484</color>
+    <color name="story_border_end">#E95D5D</color>
+
 </resources>
