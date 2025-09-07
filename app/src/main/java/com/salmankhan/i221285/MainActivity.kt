@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
             delay(3000)
 
             // Navigate to the SignupActivity
-            val intent = Intent(this@MainActivity, DmActivity::class.java)
+            val intent = Intent(this@MainActivity, PersonaldmActivity::class.java)
             startActivity(intent)
 
             // Finish the splash activity so the user can't navigate back

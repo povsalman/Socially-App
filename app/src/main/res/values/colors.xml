@@ -28,4 +28,7 @@
 
     <color name="dm_subtitle_color">#A0A0A0</color>
 
+    <color name="message_bubble_color">#9B5E63</color>
+    <color name="input_background">#F2F2F2</color>
+
 </resources>

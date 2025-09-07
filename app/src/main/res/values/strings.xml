@@ -83,5 +83,12 @@
     <string name="message_time_2h">2h</string>
     <string name="camera_text">Camera</string>
 
+    <!--    Strings for Personal DM page-->
+    <string name="video_call_desc">Video Call</string>
+    <string name="info_desc">Info</string>
+    <string name="message_time">4:49 PM</string>
+    <string name="hello_message">Hello</string>
+    <string name="message_input_hint">Message…</string>
+    <string name="camera_input_desc">Camera</string>
 
 </resources>
