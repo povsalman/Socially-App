@@ -18,13 +18,14 @@
 
     <!--    Strings for switch accounts page-->
 
-    <!--    <string name="app_name">Socially</string>-->
     <string name="socially_title">Socially</string>
     <string name="user_name">jacob_w</string>
     <string name="log_in_button">Log in</string>
     <string name="switch_accounts">Switch accounts</string>
     <string name="dont_have_account">Don\'t have an account?</string>
     <string name="sign_up">Sign up.</string>
+
+
 
 
 </resources>

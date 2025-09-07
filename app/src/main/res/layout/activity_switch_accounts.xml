@@ -23,7 +23,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/socially_title"
                 android:textSize="48sp"
-                android:fontFamily="@font/ralewaySemibold"
+                android:fontFamily="@font/ralewaysemibold"
                 android:textColor="@color/text_color"
                 android:layout_marginTop="100dp"
                 app:layout_constraintStart_toStartOf="parent"

@@ -11,5 +11,6 @@
     <color name="create_account_button_text">#FFFFFF</color>
 
     <color name="text_color">#9B5E63</color>
+    <color name="text_hint_color">#9B9393</color>
 
 </resources>

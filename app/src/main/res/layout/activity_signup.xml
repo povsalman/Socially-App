@@ -30,7 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:fontFamily="@font/ralewaySemibold"
+        android:fontFamily="@font/ralewaysemibold"
         android:text="Socially"
         android:textColor="@color/white"
         android:textSize="45dp"
