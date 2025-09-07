@@ -17,4 +17,13 @@
     <color name="story_border_start">#F28484</color>
     <color name="story_border_end">#E95D5D</color>
 
+    <color name="search_background">#F2F2F2</color>
+    <color name="category_text">#6A6A6A</color>
+    <color name="semi_transparent_black">#80000000</color>
+
+    <color name="light_gray">#F2F2F2</color>
+    <color name="tab_text_unselected">#A0A0A0</color>
+    <color name="tab_text_selected">#000000</color>
+    <color name="tab_indicator">#000000</color>
+
 </resources>

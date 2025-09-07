@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:id="@+id/main"
+    tools:context=".SearchActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="16dp"
+        android:paddingHorizontal="16dp"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/edittext_border"
+            android:hint="@string/internshala_name"
+            android:paddingVertical="8dp"
+            android:paddingStart="16dp"
+            android:drawableStart="@drawable/search"
+            android:drawablePadding="8dp"
+            android:textColorHint="@color/gray"
+            android:inputType="text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/clear_text"
+            android:textColor="@color/text_color"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:paddingHorizontal="16dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tab_top"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/text_color"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/tab_accounts"
+            android:textColor="@color/gray"
+            android:textSize="16sp"
+            android:gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/tab_tags"
+            android:textColor="@color/gray"
+            android:textSize="16sp"
+            android:gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/tab_places"
+            android:textColor="@color/gray"
+            android:textSize="16sp"
+            android:gravity="center_horizontal" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp"
+        android:paddingHorizontal="16dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout style="@style/SearchResultItem">
+
+                <TextView
+                    android:id="@+id/circle_1"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/basecircle"
+                    android:text="IS"
+                    android:textColor="@android:color/white"
+                    android:textSize="30sp"
+                    android:gravity="center"
+                    android:layout_marginStart="8dp"/>
+                <LinearLayout style="@style/SearchResultTextContainer">
+                    <TextView style="@style/SearchResultTitle" android:text="@string/internshala_name" />
+                    <TextView style="@style/SearchResultSubtitle" android:text="@string/internshala_description" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/SearchResultItem">
+                <TextView
+                    android:id="@+id/circle_2"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/ringcircle"
+                    android:text="#"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    android:gravity="center"
+                    android:layout_marginStart="8dp"/>
+
+                <LinearLayout style="@style/SearchResultTextContainer">
+                    <TextView style="@style/SearchResultTitle" android:text="@string/hashtag_internshala" />
+                    <TextView style="@style/SearchResultSubtitle" android:text="@string/post_count_1000" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/SearchResultItem">
+                <TextView
+                    android:id="@+id/circle_3"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/ringcircle"
+                    android:text="#"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    android:gravity="center"
+                    android:layout_marginStart="8dp"/>
+
+                <LinearLayout style="@style/SearchResultTextContainer">
+                    <TextView style="@style/SearchResultTitle" android:text="@string/hashtag_nomoretheory" />
+                    <TextView style="@style/SearchResultSubtitle" android:text="@string/post_count_500" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/SearchResultItem">
+                <TextView
+                    android:id="@+id/circle_4"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/ringcircle"
+                    android:text="#"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    android:gravity="center"
+                    android:layout_marginStart="8dp"/>
+
+                <LinearLayout style="@style/SearchResultTextContainer">
+                    <TextView style="@style/SearchResultTitle" android:text="Internshala" />
+                    <TextView style="@style/SearchResultSubtitle" android:text="@string/post_count_100" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/SearchResultItem">
+                <TextView
+                    android:id="@+id/circle_5"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/ringcircle"
+                    android:text="#"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    android:gravity="center"
+                    android:layout_marginStart="8dp"/>
+
+                <LinearLayout style="@style/SearchResultTextContainer">
+                    <TextView style="@style/SearchResultTitle" android:text="internshalastudentpartner" />
+                    <TextView style="@style/SearchResultSubtitle" android:text="Internshala  B610, Zone" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        style="@style/CustomBottomNav"
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:menu="@menu/bottom_nav_menu"
+        app:labelVisibilityMode="unlabeled"
+        android:background="@color/white"
+        app:itemIconTint="@color/text_color" />
+
+</LinearLayout>
