@@ -64,4 +64,24 @@
     <string name="post_count_100">100+ post</string>
     <string name="internshala_place">Internshala, B-610, Untech Business Zone,....</string>
 
+    <!--    Strings for DM page-->
+    <string name="back_arrow_desc">Back Arrow</string>
+    <string name="add_icon_desc">Add new chat</string>
+    <string name="username">jacob_w</string>
+    <string name="joshua_l_message">Have a nice day, bro!</string>
+    <string name="karennne_message">I heard this is a good movie, s...</string>
+    <string name="martini_rond">martini_rond</string>
+    <string name="martini_message">See you on the next meeting!</string>
+    <string name="andrew_message">Sounds good 😂😂😂</string>
+    <string name="kiero_d_message">The new design looks cool, b...</string>
+    <string name="maxjacobson">maxjacobson</string>
+    <string name="max_message">Thank you, bro!</string>
+    <string name="message_time_now">now</string>
+    <string name="message_time_15m">15m</string>
+    <string name="message_time_20m">20m</string>
+    <string name="message_time_1m">1m</string>
+    <string name="message_time_2h">2h</string>
+    <string name="camera_text">Camera</string>
+
+
 </resources>

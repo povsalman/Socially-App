@@ -26,4 +26,6 @@
     <color name="tab_text_selected">#000000</color>
     <color name="tab_indicator">#000000</color>
 
+    <color name="dm_subtitle_color">#A0A0A0</color>
+
 </resources>
