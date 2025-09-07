@@ -9,4 +9,7 @@
     <color name="text_input_hint">#59FFFFFF</color>
     <color name="create_account_button_background">#0EFFFFFF</color>
     <color name="create_account_button_text">#FFFFFF</color>
+
+    <color name="text_color">#9B5E63</color>
+
 </resources>
