@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:id="@+id/main"
+    tools:context=".EditProfileActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel_button"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/edit_profile_title"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:gravity="center_horizontal" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/done_button"
+            android:textColor="@color/text_color"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:gravity="center_horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/jacob_img" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/change_profile_photo"
+                android:textColor="@color/text_color"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <LinearLayout style="@style/ProfileSection">
+                <LinearLayout style="@style/EditProfileItem">
+                    <TextView style="@style/EditProfileLabel" android:text="@string/name_label" />
+                    <TextView style="@style/EditProfileValue" android:text="@string/name_value" />
+                </LinearLayout>
+                <View style="@style/EditProfileSeparator" />
+                <LinearLayout style="@style/EditProfileItem">
+                    <TextView style="@style/EditProfileLabel" android:text="@string/username_label" />
+                    <TextView style="@style/EditProfileValue" android:text="@string/username_value" />
+                </LinearLayout>
+                <View style="@style/EditProfileSeparator" />
+                <LinearLayout style="@style/EditProfileItem">
+                    <TextView style="@style/EditProfileLabel" android:text="@string/website_label" />
+                    <TextView style="@style/EditProfileValue" android:text="@string/website_hint" android:textColor="@color/gray" />
+                </LinearLayout>
+                <View style="@style/EditProfileSeparator" />
+                <LinearLayout style="@style/EditProfileItem">
+                    <TextView style="@style/EditProfileLabel" android:text="@string/bio_label" />
+                    <TextView style="@style/EditProfileValue" android:text="@string/bio_value" android:textColor="@color/gray" />
+                </LinearLayout>
+                <View style="@style/EditProfileSeparator" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/switch_to_professional"
+                android:textColor="@color/text_color"
+                android:textStyle="bold"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/private_information_label"
+                android:textColor="@color/gray"
+                android:textStyle="bold"
+                android:textSize="14sp" />
+
+            <LinearLayout style="@style/ProfileSection">
+                <LinearLayout style="@style/EditProfileItem">
+                    <TextView style="@style/EditProfileLabel" android:text="@string/email_label" />
+                    <TextView style="@style/EditProfileValue" android:text="@string/email_value" />
+                </LinearLayout>
+                <View style="@style/EditProfileSeparator" />
+                <LinearLayout style="@style/EditProfileItem">
+                    <TextView style="@style/EditProfileLabel" android:text="@string/phone_label" />
+                    <TextView style="@style/EditProfileValue" android:text="@string/phone_value" />
+                </LinearLayout>
+                <View style="@style/EditProfileSeparator" />
+                <LinearLayout style="@style/EditProfileItem">
+                    <TextView style="@style/EditProfileLabel" android:text="@string/gender_label" />
+                    <TextView style="@style/EditProfileValue" android:text="@string/gender_value" />
+                </LinearLayout>
+                <View style="@style/EditProfileSeparator" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -133,7 +133,7 @@
     <string name="sent_you_message">sent you a message</string>
     <string name="liked_your_video">liked your video</string>
 
-    <!--    Strings for Self Profile You page-->
+    <!--    Strings for Self Profile page-->
     <string name="profile_username">jacob_w</string>
     <string name="profile_posts">54\nPosts</string>
     <string name="profile_followers">834\nFollowers</string>
@@ -149,5 +149,28 @@
     <string name="stories_food">Food</string>
     <string name="stories_pets">Pets</string>
     <string name="stories_memories">Memories</string>
+
+    <!--    Strings for Edit Profile page-->
+    <string name="cancel_button">Cancel</string>
+    <string name="edit_profile_title">Edit Profile</string>
+    <string name="done_button">Done</string>
+    <string name="change_profile_photo">Change Profile Photo</string>
+    <string name="name_label">Name</string>
+    <string name="username_label">Username</string>
+    <string name="website_label">Website</string>
+    <string name="bio_label">Bio</string>
+    <string name="website_hint">Website</string>
+    <string name="name_value">Jacob West</string>
+    <string name="username_value">jacob_w</string>
+    <string name="bio_value">Digital goodies designer @pixsellz\nEverything is designed.</string>
+    <string name="switch_to_professional">Switch to Professional Account</string>
+    <string name="private_information_label">Private Information</string>
+    <string name="email_label">Email</string>
+    <string name="phone_label">Phone</string>
+    <string name="gender_label">Gender</string>
+    <string name="email_value">jacob.west@gmail.com</string>
+    <string name="phone_value">+1 202 555 0147</string>
+    <string name="gender_value">Male</string>
+
 
 </resources>
