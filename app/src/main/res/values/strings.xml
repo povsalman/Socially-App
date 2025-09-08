@@ -133,5 +133,21 @@
     <string name="sent_you_message">sent you a message</string>
     <string name="liked_your_video">liked your video</string>
 
+    <!--    Strings for Self Profile You page-->
+    <string name="profile_username">jacob_w</string>
+    <string name="profile_posts">54\nPosts</string>
+    <string name="profile_followers">834\nFollowers</string>
+    <string name="profile_following">162\nFollowing</string>
+    <string name="profile_name">Jacob West</string>
+    <string name="profile_description">Digital goodies designer @pixsellz\nEverything is designed.</string>
+    <string name="edit_profile_button">Edit Profile</string>
+    <string name="stories_new">New</string>
+    <string name="stories_friends">Friends</string>
+    <string name="stories_sport">Sport</string>
+    <string name="stories_design">Design</string>
+    <string name="stories_travel">Travel</string>
+    <string name="stories_food">Food</string>
+    <string name="stories_pets">Pets</string>
+    <string name="stories_memories">Memories</string>
 
 </resources>

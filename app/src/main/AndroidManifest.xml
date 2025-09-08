@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.I221285">
         <activity
+            android:name=".SelfProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".NotificationYouActivity"
             android:exported="false" />
         <activity

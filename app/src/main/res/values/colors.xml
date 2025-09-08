@@ -36,5 +36,6 @@
 
     <color name="follow_button_background">#9B5E63</color>
 
+    <color name="light_gray_background">#F2F2F2</color>
 
 </resources>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:id="@+id/main"
+    tools:context=".SelfProfileActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/profile_username"
+            android:textStyle="bold"
+            android:textColor="@color/text_color"
+            android:textSize="18sp"
+            android:gravity="center_horizontal" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/menu"
+            android:contentDescription="Menu"
+            app:tint="@color/text_color" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:layout_marginTop="16dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/jacob_img" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginStart="16dp">
+
+            <TextView style="@style/ProfileStatsText" android:text="@string/profile_posts" />
+            <TextView style="@style/ProfileStatsText" android:text="@string/profile_followers" />
+            <TextView style="@style/ProfileStatsText" android:text="@string/profile_following" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp">
+
+        <TextView style="@style/ProfileName" android:text="@string/profile_name" />
+        <TextView style="@style/ProfileDescription" android:text="@string/profile_description" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edit_profile_button"
+            android:text="@string/edit_profile_button"
+            android:textAllCaps="false"
+            android:textColor="@color/text_color"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            app:backgroundTint="@null" />
+
+    </LinearLayout>
+
+    <!-- Story Highlight Items (Horizontally Scrollable) -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:paddingHorizontal="16dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <LinearLayout style="@style/StoryHighlightItem">
+                <TextView
+                    android:id="@+id/circle_2"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/ringcircle"
+                    android:text="+"
+                    android:textColor="@color/text_color"
+                    android:textSize="30sp"
+                    android:gravity="center" />
+                <TextView style="@style/StoryHighlightText" android:text="@string/stories_new" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/StoryHighlightItem">
+                <de.hdodenhof.circleimageview.CircleImageView style="@style/StoryHighlightImage" android:src="@drawable/exp14" />
+                <TextView style="@style/StoryHighlightText" android:text="@string/stories_friends" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/StoryHighlightItem">
+                <de.hdodenhof.circleimageview.CircleImageView style="@style/StoryHighlightImage" android:src="@drawable/exp12" />
+                <TextView style="@style/StoryHighlightText" android:text="@string/stories_travel" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/StoryHighlightItem">
+                <de.hdodenhof.circleimageview.CircleImageView style="@style/StoryHighlightImage" android:src="@drawable/exp20" />
+                <TextView style="@style/StoryHighlightText" android:text="@string/stories_food" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/StoryHighlightItem">
+                <de.hdodenhof.circleimageview.CircleImageView style="@style/StoryHighlightImage" android:src="@drawable/exp11" />
+                <TextView style="@style/StoryHighlightText" android:text="@string/stories_pets" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/StoryHighlightItem">
+                <de.hdodenhof.circleimageview.CircleImageView style="@style/StoryHighlightImage" android:src="@drawable/exp18" />
+                <TextView style="@style/StoryHighlightText" android:text="@string/stories_memories" />
+            </LinearLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:paddingTop="8dp">
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@drawable/grid"
+            app:tint="@color/text_color" />
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@drawable/tag"
+            app:tint="@color/gray" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="4dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout style="@style/GridRow">
+                <ImageView style="@style/GridImageItem" android:src="@drawable/exp16" />
+                <ImageView style="@style/GridImageItem" android:src="@drawable/exp13" />
+                <ImageView style="@style/GridImageItem" android:src="@drawable/exp17" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/GridRow">
+                <ImageView style="@style/GridImageItem" android:src="@drawable/exp18" />
+                <FrameLayout style="@style/GridImageItem.Frame">
+                    <ImageView style="@style/GridImageItem.Inner" android:src="@drawable/exp11" />
+                    <ImageView style="@style/GridImageItem.Overlay" android:src="@drawable/camera" />
+                </FrameLayout>
+                <ImageView style="@style/GridImageItem" android:src="@drawable/exp20" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/GridRow">
+                <ImageView style="@style/GridImageItem" android:src="@drawable/exp15" />
+                <ImageView style="@style/GridImageItem" android:src="@drawable/exp10" />
+                <ImageView style="@style/GridImageItem" android:src="@drawable/exp19" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        style="@style/CustomBottomNav"
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:menu="@menu/bottom_nav_menu"
+        app:labelVisibilityMode="unlabeled"
+        android:background="@color/white"
+        app:itemIconTint="@color/text_color" />
+
+</LinearLayout>
