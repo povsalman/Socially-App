@@ -16,7 +16,7 @@
         <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/person1" />
+            android:src="@drawable/person4" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -28,14 +28,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/karennne"
+                android:text="@string/kieron_d"
                 android:textStyle="bold"
                 android:textColor="@color/black" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/tokyo_japan"
+                android:text="Lahore, Pakistan"
                 android:textColor="@color/gray" />
         </LinearLayout>
 
@@ -57,7 +57,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
-            android:src="@drawable/homepage_post"
+            android:src="@drawable/exp12"
             android:scaleType="centerCrop"
             android:contentDescription="post_image" />
 
@@ -114,7 +114,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:text="@string/craig_love"
+                android:text="@string/joshua_l"
                 android:textStyle="bold"
                 android:textColor="@color/black" />
             <TextView
@@ -129,7 +129,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="@string/post_caption"
+            android:text="@string/post_caption2"
             android:textColor="@color/black" />
     </LinearLayout>
 </LinearLayout>

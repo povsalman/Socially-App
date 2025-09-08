@@ -129,13 +129,42 @@
         android:background="#5DA0A0A0"
         />
 
-    <!-- RecyclerView for posts -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewPosts"
+    <!-- Posts Section -->
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:scrollbars="none" />
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Post 1 -->
+            <include layout="@layout/item_post" />
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dp"
+                android:layout_marginVertical="10dp" />
+
+            <!-- Post 2 -->
+            <include layout="@layout/item_post2" />
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dp"
+                android:layout_marginVertical="10dp" />
+
+            <!-- Post 3 -->
+            <include layout="@layout/item_post" />
+
+        </LinearLayout>
+    </ScrollView>
+
 
     <!-- Bottom Navigation -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
