@@ -352,8 +352,8 @@
 
     <!--    Styles for View Highlight Activity-->
     <style name="HighlightIcon">
-        <item name="android:layout_width">60dp</item>
-        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
     </style>
 
     <style name="BottomNavItem">
