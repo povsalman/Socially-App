@@ -99,5 +99,39 @@
     <string name="audio_desc">Audio</string>
     <string name="options_desc">Options</string>
 
+    <!--Strings for Notification Follower page-->
+    <string name="following_tab">Following</string>
+    <string name="you_tab">You</string>
+    <string name="liked_posts">liked %s posts.</string>
+    <string name="liked_photo">liked %s photo.</string>
+    <string name="started_following">started following %s.</string>
+    <string name="liked_comments">liked %s comment: @%s %s</string>
+    <string name="time_3h">. 3h</string>
+    <string name="commented_post">commented on your post</string>
+    <string name="time_1h">1h ago</string>
+    <string name="qaidino804">qaidino804</string>
+    <string name="shared_story">shared your story</string>
+    <string name="time_6h">6h ago</string>
+    <string name="lisa">lisa</string>
+    <string name="sent_message">sent you a message</string>
+    <string name="time_12h">12h ago</string>
+
+    <!--    Strings for Notification You page-->
+    <string name="follow_requests">Follow Requests</string>
+    <string name="new_label">New</string>
+    <string name="today_label">Today</string>
+    <string name="this_week_label">This Week</string>
+    <string name="this_month_label">This Month</string>
+    <string name="liked_your_photo">liked your photo.</string>
+    <string name="liked_your_photo_multiple">liked your photo.</string>
+    <string name="mentioned_you">mentioned you in a comment:</string>
+    <string name="started_following_you">started following you.</string>
+    <string name="message_button">Message</string>
+    <string name="follow_button">Follow</string>
+    <string name="commented_on_post">commented on your post</string>
+    <string name="shared_your_story">shared your story</string>
+    <string name="sent_you_message">sent you a message</string>
+    <string name="liked_your_video">liked your video</string>
+
 
 </resources>

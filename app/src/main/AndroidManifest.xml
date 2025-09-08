@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.I221285">
         <activity
+            android:name=".NotificationYouActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NotificationFollowerActivity"
+            android:exported="false" />
+        <activity
             android:name=".VideocallActivity"
             android:exported="false" />
         <activity

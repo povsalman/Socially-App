@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:id="@+id/main"
+    tools:context=".NotificationFollowerActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:paddingHorizontal="16dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+            <TextView
+                android:id="@+id/tab_following"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/following_tab"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/text_color"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tab_you"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/you_tab"
+            android:textColor="@color/gray"
+            android:textSize="16sp"
+            android:gravity="center_horizontal" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout style="@style/NotificationItem">
+                <de.hdodenhof.circleimageview.CircleImageView style="@style/NotificationImage" android:src="@drawable/person1" />
+                <LinearLayout style="@style/NotificationTextContainer">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:text="@string/karennne" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/liked_posts"
+                        android:textColor="@color/black" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/time_3h"
+                        android:textColor="@color/gray" />
+                </LinearLayout>
+                <LinearLayout style="@style/NotificationThumbnailsContainer">
+                    <ImageView style="@style/NotificationThumbnail" android:src="@drawable/exp2" />
+                    <ImageView style="@style/NotificationThumbnail" android:src="@drawable/exp4" />
+                    <ImageView style="@style/NotificationThumbnail" android:src="@drawable/exp5" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/NotificationItem">
+                <de.hdodenhof.circleimageview.CircleImageView style="@style/NotificationImage" android:src="@drawable/person4" />
+                <LinearLayout style="@style/NotificationTextContainer">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:text="@string/kieron_d" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/started_following"
+                        android:textColor="@color/black" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/time_3h"
+                        android:textColor="@color/gray" />
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/exp11"
+                    android:scaleType="centerCrop" />
+            </LinearLayout>
+
+            <!-- Additional Rows -->
+            <LinearLayout style="@style/NotificationItem">
+                <de.hdodenhof.circleimageview.CircleImageView style="@style/NotificationImage" android:src="@drawable/person2" />
+                <LinearLayout style="@style/NotificationTextContainer">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:text="@string/joshua_l" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/commented_post"
+                        android:textColor="@color/black" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/time_1h"
+                        android:textColor="@color/gray" />
+                </LinearLayout>
+                <LinearLayout style="@style/NotificationThumbnailsContainer">
+                    <ImageView style="@style/NotificationThumbnail" android:src="@drawable/exp1" />
+                    <ImageView style="@style/NotificationThumbnail" android:src="@drawable/exp3" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/NotificationItem">
+                <de.hdodenhof.circleimageview.CircleImageView style="@style/NotificationImage" android:src="@drawable/person5" />
+                <LinearLayout style="@style/NotificationTextContainer">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:text="qaidino804" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/shared_story"
+                        android:textColor="@color/black" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/time_6h"
+                        android:textColor="@color/gray" />
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/exp6"
+                    android:scaleType="centerCrop" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/NotificationItem">
+                <de.hdodenhof.circleimageview.CircleImageView style="@style/NotificationImage" android:src="@drawable/person6" />
+                <LinearLayout style="@style/NotificationTextContainer">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:text="lisa" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sent_message"
+                        android:textColor="@color/black" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/time_12h"
+                        android:textColor="@color/gray" />
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/exp7"
+                    android:scaleType="centerCrop" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        style="@style/CustomBottomNav"
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:menu="@menu/bottom_nav_menu"
+        app:labelVisibilityMode="unlabeled"
+        android:background="@color/white"
+        app:itemIconTint="@color/text_color" />
+</LinearLayout>

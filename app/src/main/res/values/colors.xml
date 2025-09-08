@@ -34,4 +34,7 @@
     <color name="background_color">#9B5E63</color>
     <color name="end_call_button">#E62214</color>
 
+    <color name="follow_button_background">#9B5E63</color>
+
+
 </resources>
