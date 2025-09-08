@@ -172,5 +172,16 @@
     <string name="phone_value">+1 202 555 0147</string>
     <string name="gender_value">Male</string>
 
+    <!--    Strings for View Highlight page-->
+    <string name="highlight_title">Highlight</string>
+    <string name="highlight_date">December 3, 2023</string>
+    <string name="highlight_artist_song">♬ Artist • Song Title</string>
+    <string name="nav_activity_label">Activity</string>
+    <string name="nav_create_label">Create</string>
+    <string name="nav_create_post_label">Create Post</string>
+    <string name="nav_browse_label">Browse</string>
+    <string name="nav_send_label">Send</string>
+    <string name="nav_more_label">More</string>
+
 
 </resources>

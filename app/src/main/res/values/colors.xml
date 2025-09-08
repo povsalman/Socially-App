@@ -40,5 +40,6 @@
 
     <color name="light_gray_separator">#E0E0E0</color>
 
+    <color name="transparent_black">#80000000</color>
 
 </resources>

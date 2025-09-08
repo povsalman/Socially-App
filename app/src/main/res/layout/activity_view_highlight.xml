@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    tools:context=".ViewHighlightActivity">
+
+    <!-- Background Image -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/exp21"
+        android:scaleType="centerCrop"
+        android:contentDescription="Highlight background image" />
+
+    <!-- Top and Bottom Overlays -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Top Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView style="@style/HighlightIcon" android:src="@drawable/exp14"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/highlight_title"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="@string/highlight_date"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/highlight_artist_song"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/close"
+                    android:contentDescription="Close button"
+                    app:tint="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Spacer to push bottom nav to the bottom -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- Bottom Navigation Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/transparent_black"
+            android:paddingTop="12dp"
+            android:paddingBottom="8dp"
+            android:gravity="center_vertical">
+
+            <LinearLayout style="@style/BottomNavItem">
+                <ImageView style="@style/BottomNavIcon" android:src="@drawable/eye_activity" />
+                <TextView style="@style/BottomNavText" android:text="@string/nav_activity_label" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/BottomNavItem" android:layout_marginStart="18dp">
+                <ImageView style="@style/BottomNavIcon" android:src="@drawable/reels" />
+                <TextView style="@style/BottomNavText" android:text="@string/nav_create_label" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/BottomNavItem">
+                <ImageView style="@style/BottomNavIcon" android:src="@drawable/create_post_new" />
+                <TextView style="@style/BottomNavText" android:text="@string/nav_create_post_label" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/BottomNavItem">
+                <ImageView style="@style/BottomNavIcon" android:src="@drawable/highlight_slides" />
+                <TextView style="@style/BottomNavText" android:text="@string/nav_browse_label" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/BottomNavItem">
+                <ImageView style="@style/BottomNavIcon" android:src="@drawable/share" />
+                <TextView style="@style/BottomNavText" android:text="@string/nav_send_label" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/BottomNavItem">
+                <ImageView style="@style/BottomNavIcon" android:src="@drawable/options" />
+                <TextView style="@style/BottomNavText" android:text="@string/nav_more_label" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</FrameLayout>
