@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.I221285">
         <activity
+            android:name=".VideocallActivity"
+            android:exported="false" />
+        <activity
             android:name=".PersonaldmActivity"
             android:exported="false" />
         <activity

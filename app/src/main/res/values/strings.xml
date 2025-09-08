@@ -92,4 +92,12 @@
     <string name="message_input_hint">Message…</string>
     <string name="camera_input_desc">Camera</string>
 
+    <!--    Strings for Video Call page-->
+    <string name="mother_name">Mommy</string>
+    <string name="call_duration">03:12</string>
+    <string name="end_call_desc">End Call</string>
+    <string name="audio_desc">Audio</string>
+    <string name="options_desc">Options</string>
+
+
 </resources>
