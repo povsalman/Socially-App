@@ -15,9 +15,6 @@
             android:name=".OtherFollowingProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".PostImageActivity"
-            android:exported="false" />
-        <activity
             android:name=".StoryEditOwnActivity"
             android:exported="false" />
         <activity
@@ -36,13 +33,10 @@
             android:name=".EditProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".SelfProfileActivity"
-            android:exported="false" />
-        <activity
             android:name=".NotificationYouActivity"
             android:exported="false" />
         <activity
-            android:name=".NotificationFollowerActivity"
+            android:name=".NotificationFollowerFragment"
             android:exported="false" />
         <activity
             android:name=".VideocallActivity"
@@ -55,9 +49,6 @@
             android:exported="false" />
         <activity
             android:name=".SearchActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ExploreActivity"
             android:exported="false" />
         <activity
             android:name=".HomeActivity"

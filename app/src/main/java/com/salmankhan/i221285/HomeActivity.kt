@@ -2,8 +2,8 @@ package com.salmankhan.i221285
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import androidx.fragment.app.Fragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomeActivity : AppCompatActivity() {
 
@@ -11,10 +11,41 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        bottomNavigationView.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.nav_home -> {
+                    loadFragment(HomeFragment())
+                    true
+                }
+                R.id.nav_search -> {
+                    loadFragment(ExploreFragment())
+                    true
+                }
+                R.id.nav_add -> {
+                    loadFragment(PostImageFragment())
+                    true
+                }
+                R.id.nav_likes -> {
+                    loadFragment(NotificationFollowerFragment())
+                    true
+                }
+                R.id.nav_profile -> {
+                    loadFragment(SelfProfileFragment())
+                    true
+                }
+                else -> false
+            }
         }
+
+        // Load default fragment
+        loadFragment(HomeFragment())
+        bottomNavigationView.selectedItemId = R.id.nav_home
+    }
+
+    private fun loadFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment_container, fragment)
+            .commit()
     }
 }
