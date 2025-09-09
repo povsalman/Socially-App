@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    android:id="@+id/main"
+    tools:context=".PostImageActivity">
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:padding="10dp"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel_button"
+            android:textColor="@color/text_color"
+            android:textSize="20dp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/recents_label"
+            android:textColor="@color/text_color"
+            android:textSize="22dp" />
+
+        <ImageView
+            style="@style/downIcon"
+            android:src="@drawable/chevron_down"
+            android:contentDescription="check posts" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/next_button"
+            android:textColor="@color/text_color"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Main Preview Image -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/black">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/exp7"
+            android:contentDescription="Main preview image" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            android:paddingVertical="8dp"
+            android:paddingHorizontal="12dp"
+            android:background="@drawable/select_multiple_background"
+            android:text="@string/select_multiple"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:drawableStart="@drawable/search_background"
+            android:drawablePadding="8dp" />
+    </FrameLayout>
+
+    <!-- Scrollable Image Grid -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:padding="4dp">
+
+            <ImageView style="@style/GridImageItem_post" android:src="@drawable/exp2" />
+            <ImageView style="@style/GridImageItem_post" android:src="@drawable/exp3" />
+            <ImageView style="@style/GridImageItem_post" android:src="@drawable/exp4" />
+            <ImageView style="@style/GridImageItem_post" android:src="@drawable/exp5" />
+            <ImageView style="@style/GridImageItem_post" android:src="@drawable/exp6" />
+            <ImageView style="@style/GridImageItem_post" android:src="@drawable/exp20" />
+            <ImageView style="@style/GridImageItem_post" android:src="@drawable/exp12" />
+            <ImageView style="@style/GridImageItem_post" android:src="@drawable/exp11" />
+            <ImageView style="@style/GridImageItem_post" android:src="@drawable/exp13" />
+            <ImageView style="@style/GridImageItem_post" android:src="@drawable/exp14" />
+            <ImageView style="@style/GridImageItem_post" android:src="@drawable/exp15" />
+            <ImageView style="@style/GridImageItem_post" android:src="@drawable/exp16" />
+            <ImageView style="@style/GridImageItem_post" android:src="@drawable/exp17" />
+            <ImageView style="@style/GridImageItem_post" android:src="@drawable/exp18" />
+            <ImageView style="@style/GridImageItem_post" android:src="@drawable/exp19" />
+        </GridLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingVertical="8dp"
+        android:paddingHorizontal="16dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/library_label"
+            android:textColor="@color/text_color"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/photo_label"
+            android:textColor="@color/text_color"
+            android:textSize="20dp"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/video_label"
+            android:textColor="@color/text_color"
+            android:textSize="20dp"
+            android:gravity="center" />
+    </LinearLayout>
+</LinearLayout>

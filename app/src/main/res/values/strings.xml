@@ -215,5 +215,13 @@
     <string name="close_friends">Close Friends</string>
     <string name="send_arrow_desc">Send</string>
 
+    <!--    Strings for Post Image page-->
+    <string name="recents_label">Recents</string>
+    <string name="next_button">Next</string>
+    <string name="select_multiple">SELECT MULTIPLE</string>
+    <string name="library_label">Library</string>
+    <string name="photo_label">Photo</string>
+    <string name="video_label">Video</string>
+
 
 </resources>
