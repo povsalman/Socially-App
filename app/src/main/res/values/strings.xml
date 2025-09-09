@@ -183,5 +183,20 @@
     <string name="nav_send_label">Send</string>
     <string name="nav_more_label">More</string>
 
+    <!--    Strings for Story Take page-->
+    <string name="camera_type">TYPE</string>
+    <string name="camera_live">LIVE</string>
+    <string name="camera_normal">NORMAL</string>
+    <string name="camera_boomerang">BOOMERANG</string>
+    <string name="gallery_icon_desc">Gallery</string>
+    <string name="flash_icon_desc">Flash</string>
+    <string name="camera_capture_desc">Capture button</string>
+    <string name="camera_switch_desc">Switch camera</string>
+    <string name="smiley_desc">Smiley</string>
+    <string name="heart_desc">Heart</string>
+    <string name="camera_video">Video</string>
+
+
+
 
 </resources>
