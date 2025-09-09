@@ -108,7 +108,10 @@
                     android:layout_marginStart="4dp"
                     android:textSize="14sp"
                     android:textStyle="bold"
-                    android:textColor="@color/text_color" />
+                    android:textColor="@color/text_color"
+                    android:clickable="true"
+                    android:focusable="true" />
+
 
             </LinearLayout>
 
