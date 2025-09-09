@@ -223,5 +223,21 @@
     <string name="photo_label">Photo</string>
     <string name="video_label">Video</string>
 
+    <!--    Strings for Other Profile Following page-->
+    <string name="other_profile_username">kyan.coleman</string>
+    <string name="other_profile_posts">151\nposts</string>
+    <string name="other_profile_followers">112K\nfollowers</string>
+    <string name="other_profile_following">162\nfollowing</string>
+    <string name="other_profile_name">Kyan Coleman</string>
+    <string name="profile_tag">kyan.coleman</string>
+    <string name="profile_bio">Blogger\nAt vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecat... more</string>
+    <string name="profile_website">kyan.co</string>
+    <string name="followed_by">Followed by your friend, another friend and 297 others</string>
+    <string name="other_message_button">Message</string>
+    <string name="email_button">Email</string>
+    <string name="following_button">Following</string>
+    <string name="added_friend_button">Added</string>
+
+
 
 </resources>

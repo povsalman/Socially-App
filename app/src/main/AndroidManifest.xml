@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.I221285">
         <activity
+            android:name=".OtherFollowingProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".PostImageActivity"
             android:exported="false" />
         <activity

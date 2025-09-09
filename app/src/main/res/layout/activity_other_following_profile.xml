@@ -7,14 +7,21 @@
     android:orientation="vertical"
     android:background="@color/white"
     android:id="@+id/main"
-    tools:context=".SelfProfileActivity">
+    tools:context=".OtherFollowingProfileActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:padding="5dp">
+        android:padding="16dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/chevron_left"
+            android:contentDescription="Back"
+            app:tint="@color/text_color" />
 
         <TextView
             android:layout_width="0dp"
@@ -22,16 +29,16 @@
             android:layout_weight="1"
             android:text="@string/profile_username"
             android:textStyle="bold"
-            android:textColor="@color/text_color"
+            android:textColor="@color/black"
             android:textSize="18sp"
             android:gravity="center_horizontal" />
 
         <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/menu"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/options"
             android:contentDescription="Menu"
-            app:tint="@color/text_color" />
+            app:tint="@color/black" />
     </LinearLayout>
 
     <LinearLayout
@@ -40,12 +47,12 @@
         android:orientation="horizontal"
         android:gravity="center_vertical"
         android:paddingHorizontal="16dp"
-        android:layout_marginTop="5dp">
+        android:layout_marginTop="16dp">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/jacob_img" />
+            android:src="@drawable/person3" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -69,22 +76,48 @@
         android:layout_marginTop="8dp">
 
         <TextView style="@style/ProfileName" android:text="@string/profile_name" />
-        <TextView style="@style/ProfileDescription" android:text="@string/profile_description" />
+        <TextView style="@style/ProfileDescription" android:text="@string/profile_bio" />
+        <TextView style="@style/ProfileWebsite" android:text="@string/profile_website" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/followed_by"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:paddingHorizontal="16dp">
 
         <com.google.android.material.button.MaterialButton
-            android:layout_width="match_parent"
-            android:layout_height="36dp"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/edit_profile_button"
-            android:text="@string/edit_profile_button"
-            android:textAllCaps="false"
-            android:textColor="@color/text_color"
-            android:textAlignment="center"
-            android:textSize="14dp"
-            android:textStyle="bold"
+            android:id="@+id/followButton"
+            style="@style/ProfileActionButton"
+            android:text="@string/following_button"
             app:backgroundTint="@null" />
 
+        <com.google.android.material.button.MaterialButton
+            style="@style/ProfileActionButton"
+            android:text="@string/message_button"
+            app:backgroundTint="@null" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/ProfileActionButton"
+            android:text="@string/email_button"
+            app:backgroundTint="@null" />
+
+
+        <ImageView
+            style="@style/ProfileActionIcon"
+            android:src="@drawable/partnership"
+            android:contentDescription="Add User" />
     </LinearLayout>
+
 
     <!-- Story Highlight Items (Horizontally Scrollable) -->
     <HorizontalScrollView
@@ -99,19 +132,6 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical">
-
-            <LinearLayout style="@style/StoryHighlightItem">
-                <TextView
-                    android:id="@+id/circle_2"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:background="@drawable/ringcircle"
-                    android:text="+"
-                    android:textColor="@color/text_color"
-                    android:textSize="30sp"
-                    android:gravity="center" />
-                <TextView style="@style/StoryHighlightText" android:text="@string/stories_new" />
-            </LinearLayout>
 
             <LinearLayout style="@style/StoryHighlightItem">
                 <de.hdodenhof.circleimageview.CircleImageView style="@style/StoryHighlightImage" android:src="@drawable/exp14" />
@@ -137,6 +157,20 @@
                 <de.hdodenhof.circleimageview.CircleImageView style="@style/StoryHighlightImage" android:src="@drawable/exp18" />
                 <TextView style="@style/StoryHighlightText" android:text="@string/stories_memories" />
             </LinearLayout>
+
+            <LinearLayout style="@style/StoryHighlightItem">
+                <TextView
+                    android:id="@+id/circle_2"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/ringcircle"
+                    android:text="+"
+                    android:textColor="@color/text_color"
+                    android:textSize="30sp"
+                    android:gravity="center" />
+                <TextView style="@style/StoryHighlightText" android:text="@string/stories_new" />
+            </LinearLayout>
+
         </LinearLayout>
     </HorizontalScrollView>
 
@@ -206,6 +240,7 @@
         app:menu="@menu/bottom_nav_menu"
         app:labelVisibilityMode="unlabeled"
         android:background="@color/white"
-        app:itemIconTint="@color/text_color" />
+        app:itemIconTint="@color/text_color"
+        />
 
 </LinearLayout>
