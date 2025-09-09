@@ -210,5 +210,10 @@
     <string name="bottom_highlight">Highlight</string>
     <string name="bottom_more">More</string>
 
+    <!--    Strings for Story Edit Own page-->
+    <string name="your_stories">Your stories</string>
+    <string name="close_friends">Close Friends</string>
+    <string name="send_arrow_desc">Send</string>
+
 
 </resources>

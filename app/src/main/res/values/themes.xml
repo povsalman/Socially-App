@@ -421,6 +421,12 @@
     </style>
 
 
-
+    <!--    Styles for Story Edit Own Activity-->
+    <style name="StoryEditIcon">
+        <item name="android:layout_width">38dp</item>
+        <item name="android:layout_height">38dp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:tint">@color/white</item>
+    </style>
 
 </resources>

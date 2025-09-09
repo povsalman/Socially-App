@@ -42,4 +42,6 @@
 
     <color name="transparent_black">#80000000</color>
 
+    <color name="socially_dark">#444444</color>
+
 </resources>
