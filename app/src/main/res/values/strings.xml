@@ -201,5 +201,14 @@
     <string name="story_time_ago">4h</string>
     <string name="send_message_hint">Send Message</string>
 
+    <!--    Strings for Story View Own page-->
+    <string name="own_story_username">gursky.studio</string>
+    <string name="own_story_time_ago">11h</string>
+    <string name="bottom_activity">Activity</string>
+    <string name="bottom_create">Create</string>
+    <string name="bottom_facebook">Facebook</string>
+    <string name="bottom_highlight">Highlight</string>
+    <string name="bottom_more">More</string>
+
 
 </resources>

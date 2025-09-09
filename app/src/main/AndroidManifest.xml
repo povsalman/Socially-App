@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.I221285">
         <activity
+            android:name=".StoryViewOwnActivity"
+            android:exported="false" />
+        <activity
             android:name=".StoryViewOthersActivity"
             android:exported="false" />
         <activity
