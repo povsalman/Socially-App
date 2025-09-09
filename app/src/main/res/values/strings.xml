@@ -196,7 +196,10 @@
     <string name="heart_desc">Heart</string>
     <string name="camera_video">Video</string>
 
-
+    <!--    Strings for Story View Others page-->
+    <string name="story_username">craig_love</string>
+    <string name="story_time_ago">4h</string>
+    <string name="send_message_hint">Send Message</string>
 
 
 </resources>

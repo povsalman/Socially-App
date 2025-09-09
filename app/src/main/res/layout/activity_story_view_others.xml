@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    android:id="@+id/main"
+    tools:context=".StoryViewOthersActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/exp18"
+            android:contentDescription="User story" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center_vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/person3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/story_username"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/story_time_ago"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                style="@style/CloseIcon"
+                android:src="@drawable/close"
+                android:contentDescription="Close story" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        style="@style/ChatInputContainer">
+
+        <ImageView
+            style="@style/ChatInputIcon"
+            app:srcCompat="@drawable/ic_camera_white"
+            android:contentDescription="Camera" />
+
+        <TextView
+            style="@style/ChatInputText"
+            android:text="@string/send_message_hint" />
+
+        <ImageView
+            style="@style/ChatInputIcon"
+            android:layout_marginStart="8dp"
+            app:srcCompat="@drawable/share"
+            android:contentDescription="Send message" />
+    </LinearLayout>
+
+</LinearLayout>
