@@ -33,12 +33,6 @@
             android:name=".EditProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".NotificationYouActivity"
-            android:exported="false" />
-        <activity
-            android:name=".NotificationFollowerFragment"
-            android:exported="false" />
-        <activity
             android:name=".VideocallActivity"
             android:exported="false" />
         <activity

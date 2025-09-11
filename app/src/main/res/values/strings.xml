@@ -102,10 +102,10 @@
     <!--Strings for Notification Follower page-->
     <string name="following_tab">Following</string>
     <string name="you_tab">You</string>
-    <string name="liked_posts">liked %s posts.</string>
-    <string name="liked_photo">liked %s photo.</string>
-    <string name="started_following">started following %s.</string>
-    <string name="liked_comments">liked %s comment: @%s %s</string>
+    <string name="liked_posts">liked 2 posts.</string>
+    <string name="liked_photo">liked a photo.</string>
+    <string name="started_following">started following You.</string>
+    <string name="liked_comments">liked your comment: @jermy haha</string>
     <string name="time_3h">. 3h</string>
     <string name="commented_post">commented on your post</string>
     <string name="time_1h">1h ago</string>

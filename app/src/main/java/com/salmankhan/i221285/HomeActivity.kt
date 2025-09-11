@@ -27,7 +27,7 @@ class HomeActivity : AppCompatActivity() {
                     true
                 }
                 R.id.nav_likes -> {
-                    loadFragment(NotificationFollowerFragment())
+                    loadFragment(NotificationYouFragment()) // Default to You tab
                     true
                 }
                 R.id.nav_profile -> {
