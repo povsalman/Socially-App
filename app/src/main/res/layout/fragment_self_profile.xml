@@ -72,6 +72,7 @@
         <com.google.android.material.button.MaterialButton
             android:layout_width="match_parent"
             android:layout_height="36dp"
+            android:id="@+id/edit_profile_button"
             android:layout_marginTop="16dp"
             android:background="@drawable/edit_profile_button"
             android:text="@string/edit_profile_button"
@@ -112,7 +113,9 @@
             </LinearLayout>
 
             <LinearLayout style="@style/StoryHighlightItem">
-                <de.hdodenhof.circleimageview.CircleImageView style="@style/StoryHighlightImage" android:src="@drawable/exp14" />
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/highlight_image_1"
+                    style="@style/StoryHighlightImage" android:src="@drawable/exp14" />
                 <TextView style="@style/StoryHighlightText" android:text="@string/stories_friends" />
             </LinearLayout>
 
