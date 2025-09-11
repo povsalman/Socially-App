@@ -33,6 +33,16 @@
                 android:src="@drawable/settings"
                 android:contentDescription="Settings"
                 app:tint="@color/white" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+            <ImageView
+                style="@style/CloseIcon"
+                android:src="@drawable/close"
+                android:id="@+id/close_icon"
+                app:tint="@color/white"
+                android:contentDescription="Close story" />
         </LinearLayout>
 
         <View
@@ -70,6 +80,7 @@
             <ImageView
                 android:layout_width="72dp"
                 android:layout_height="72dp"
+                android:id="@+id/capture_button"
                 android:src="@drawable/camera_capture_button"
                 android:layout_marginHorizontal="16dp"
                 android:contentDescription="@string/camera_capture_desc" />

@@ -36,6 +36,7 @@
                 <ImageView
                     style="@style/StoryEditIcon"
                     android:src="@drawable/story_close"
+                    android:id="@+id/close_icon"
                     android:layout_marginEnd="8dp" />
 
                 <!-- Small gap -->
@@ -130,6 +131,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="8dp"
+            android:id="@+id/post_icon"
             android:src="@drawable/next_circle"
             android:contentDescription="Send Story" />
     </LinearLayout>

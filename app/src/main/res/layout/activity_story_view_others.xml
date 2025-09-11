@@ -58,6 +58,7 @@
             <ImageView
                 style="@style/CloseIcon"
                 android:src="@drawable/close"
+                android:id="@+id/close_icon"
                 android:contentDescription="Close story" />
 
         </LinearLayout>
