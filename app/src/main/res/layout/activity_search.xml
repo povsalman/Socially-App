@@ -121,7 +121,9 @@
                     android:gravity="center"
                     android:layout_marginStart="8dp"/>
                 <LinearLayout style="@style/SearchResultTextContainer">
-                    <TextView style="@style/SearchResultTitle" android:text="@string/internshala_name" />
+                    <TextView style="@style/SearchResultTitle"
+                        android:id="@+id/go_to_profile"
+                        android:text="@string/internshala_name" />
                     <TextView style="@style/SearchResultSubtitle" android:text="@string/internshala_description" />
                 </LinearLayout>
 

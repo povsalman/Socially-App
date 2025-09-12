@@ -5,9 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white"
-    android:id="@+id/main"
-    tools:context=".OtherFollowingProfileActivity">
+    android:background="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,6 +17,7 @@
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
+            android:id="@+id/back_icon"
             android:src="@drawable/chevron_left"
             android:contentDescription="Back"
             app:tint="@color/text_color" />
@@ -28,6 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/profile_username"
+            android:id="@+id/profile_name_top"
             android:textStyle="bold"
             android:textColor="@color/black"
             android:textSize="18sp"
@@ -230,17 +230,5 @@
 
         </LinearLayout>
     </ScrollView>
-
-    <!-- Bottom Navigation -->
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        style="@style/CustomBottomNav"
-        android:id="@+id/bottom_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        app:menu="@menu/bottom_nav_menu"
-        app:labelVisibilityMode="unlabeled"
-        android:background="@color/white"
-        app:itemIconTint="@color/text_color"
-        />
 
 </LinearLayout>

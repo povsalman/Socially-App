@@ -25,7 +25,7 @@ class LoginActivity : AppCompatActivity() {
         }
 
         // Button click -> Go to HomeActivity
-        val createAccountBtn = findViewById<Button>(R.id.log_in_button)
+        val createAccountBtn = findViewById<Button>(R.id.log_in_button2)
         createAccountBtn.setOnClickListener {
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)

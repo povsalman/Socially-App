@@ -80,6 +80,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:id="@+id/post_icon"
             android:orientation="horizontal"
             android:gravity="center_vertical"
             android:padding="8dp"
@@ -131,7 +132,6 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="8dp"
-            android:id="@+id/post_icon"
             android:src="@drawable/next_circle"
             android:contentDescription="Send Story" />
     </LinearLayout>

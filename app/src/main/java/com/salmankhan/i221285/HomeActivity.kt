@@ -1,5 +1,6 @@
 package com.salmankhan.i221285
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -38,9 +39,16 @@ class HomeActivity : AppCompatActivity() {
             }
         }
 
-        // Load default fragment
-        loadFragment(HomeFragment())
-        bottomNavigationView.selectedItemId = R.id.nav_home
+        // Handle intent extra to load OtherFollowingProfileFragment
+        val fragmentToLoad = intent.getStringExtra("fragment_to_load")
+        val forceFragmentLoad = intent.getBooleanExtra("force_fragment_load", false)
+        if (forceFragmentLoad && fragmentToLoad == "OtherFollowingProfile") {
+            bottomNavigationView.selectedItemId = R.id.nav_search // Set navigation first
+            loadFragment(OtherFollowingProfileFragment())
+        } else if (savedInstanceState == null) { // Only load default if not restoring state
+            loadFragment(HomeFragment())
+            bottomNavigationView.selectedItemId = R.id.nav_home
+        }
     }
 
     private fun loadFragment(fragment: Fragment) {
