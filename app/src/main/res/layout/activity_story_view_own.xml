@@ -14,6 +14,7 @@
         android:layout_weight="1">
 
         <ImageView
+            android:id="@+id/story_image"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
@@ -27,10 +28,12 @@
             android:padding="16dp"
             android:gravity="center_vertical">
             <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/story_profile_image"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/person4" />
             <TextView
+                android:id="@+id/story_username"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -39,6 +42,7 @@
                 android:textStyle="bold"
                 android:textSize="16sp" />
             <TextView
+                android:id="@+id/story_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -82,7 +86,9 @@
             <ImageView style="@style/BottomNavIcon" android:src="@drawable/highlight_added" />
             <TextView style="@style/BottomNavText" android:text="@string/bottom_highlight" />
         </LinearLayout>
-        <LinearLayout style="@style/BottomNavItem">
+        <LinearLayout 
+            android:id="@+id/more_options_button"
+            style="@style/BottomNavItem">
             <ImageView style="@style/BottomNavIcon" android:src="@drawable/options" />
             <TextView style="@style/BottomNavText" android:text="@string/bottom_more" />
         </LinearLayout>

@@ -1,0 +1,125 @@
+package com.salmankhan.i221285
+
+import android.content.Intent
+import android.os.Bundle
+import android.util.Log
+import android.view.View
+import android.widget.ImageView
+import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.database.FirebaseDatabase
+import com.salmankhan.i221285.adapters.SearchUsersAdapter
+import com.salmankhan.i221285.models.User
+import com.salmankhan.i221285.services.FollowService
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.tasks.await
+
+class FollowingListActivity : AppCompatActivity() {
+
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var emptyState: TextView
+    private lateinit var titleText: TextView
+    private lateinit var adapter: SearchUsersAdapter
+    private val following = mutableListOf<User>()
+    
+    private var userId: String? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_following_list)
+
+        userId = intent.getStringExtra("user_id")
+        val username = intent.getStringExtra("username") ?: "User"
+
+        // Initialize views
+        recyclerView = findViewById(R.id.following_recycler_view)
+        emptyState = findViewById(R.id.empty_state_text)
+        titleText = findViewById(R.id.title_text)
+        
+        titleText.text = "$username's Following"
+
+        // Back button
+        findViewById<ImageView>(R.id.back_button).setOnClickListener {
+            finish()
+        }
+
+        // Setup RecyclerView
+        setupRecyclerView()
+
+        // Load following
+        loadFollowing()
+    }
+
+    private fun setupRecyclerView() {
+        adapter = SearchUsersAdapter(following) { user ->
+            openUserProfile(user.uid)
+        }
+        
+        recyclerView.apply {
+            layoutManager = LinearLayoutManager(this@FollowingListActivity)
+            adapter = this@FollowingListActivity.adapter
+        }
+    }
+
+    private fun loadFollowing() {
+        val uid = userId ?: return
+        
+        lifecycleScope.launch {
+            try {
+                val followingIds = FollowService.getFollowingList(uid)
+                val users = mutableListOf<User>()
+                
+                for (followingId in followingIds) {
+                    val userRef = FirebaseDatabase.getInstance().getReference("users").child(followingId)
+                    val snapshot = userRef.get().await()
+                    
+                    if (snapshot.exists()) {
+                        val user = User(
+                            uid = followingId,
+                            username = snapshot.child("username").getValue(String::class.java) ?: "",
+                            firstName = snapshot.child("firstName").getValue(String::class.java) ?: "",
+                            lastName = snapshot.child("lastName").getValue(String::class.java) ?: "",
+                            profileImage = snapshot.child("profileImage").getValue(String::class.java) ?: ""
+                        )
+                        users.add(user)
+                    }
+                }
+                
+                runOnUiThread {
+                    following.clear()
+                    following.addAll(users)
+                    adapter.notifyDataSetChanged()
+                    
+                    if (users.isEmpty()) {
+                        recyclerView.visibility = View.GONE
+                        emptyState.visibility = View.VISIBLE
+                    } else {
+                        recyclerView.visibility = View.VISIBLE
+                        emptyState.visibility = View.GONE
+                    }
+                    
+                    Log.d("FollowingList", "Loaded ${users.size} following")
+                }
+            } catch (e: Exception) {
+                Log.e("FollowingList", "Error loading following: ${e.message}", e)
+                runOnUiThread {
+                    Toast.makeText(this@FollowingListActivity, "Error loading following", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
+    }
+
+    private fun openUserProfile(userId: String) {
+        val intent = Intent(this, HomeActivity::class.java)
+        intent.putExtra("fragment_to_load", "OtherFollowingProfile")
+        intent.putExtra("other_user_id", userId)
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        intent.putExtra("force_fragment_load", true)
+        startActivity(intent)
+    }
+}
+

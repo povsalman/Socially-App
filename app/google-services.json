@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1032428913521",
+    "project_id": "smda2-b7ede",
+    "storage_bucket": "smda2-b7ede.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1032428913521:android:bc7c523171e85a98136cd0",
+        "android_client_info": {
+          "package_name": "com.salmankhan.i221285"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFVObLknpCHfYizHB-zn11I8wLh6TnLm8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

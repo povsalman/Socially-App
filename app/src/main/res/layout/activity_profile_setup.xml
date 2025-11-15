@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:padding="32dp"
+    tools:context=".ProfileSetupActivity">
+
+    <!-- Back Button -->
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Back"
+        android:padding="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_arrow_back"
+        app:tint="@color/white" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/ralewaysemibold"
+        android:text="Complete Your Profile"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/subtitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add a profile picture and tell us about yourself"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Profile Picture Section -->
+    <LinearLayout
+        android:id="@+id/profilePictureLayout"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subtitleTextView">
+
+        <ImageView
+            android:id="@+id/profilePictureImageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/circle_image_background"
+            android:contentDescription="Profile picture"
+            android:padding="24dp"
+            android:src="@drawable/ic_camera_white" />
+
+    </LinearLayout>
+
+    <!-- Bio Input Field -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/bioInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:hint="Bio (Optional)"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:hintTextColor="@color/text_input_hint"
+        app:layout_constraintTop_toBottomOf="@id/profilePictureLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/bioEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:maxLines="3"
+            android:text="Tell us about yourself..."
+            android:textColor="@color/white"
+            android:textColorHint="@color/text_input_hint" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Interests Input Field -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/interestsInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Interests (Optional)"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:hintTextColor="@color/text_input_hint"
+        app:layout_constraintTop_toBottomOf="@id/bioInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/interestsEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:text="e.g., Photography, Music, Travel"
+            android:textColor="@color/white"
+            android:textColorHint="@color/text_input_hint" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Complete Profile Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/completeProfileButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Complete Profile"
+        android:textAllCaps="false"
+        android:textColor="@color/create_account_button_text"
+        android:textSize="18sp"
+        android:paddingVertical="16dp"
+        app:cornerRadius="8dp"
+        app:backgroundTint="@color/create_account_button_background"
+        android:alpha="0.8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/interestsInputLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

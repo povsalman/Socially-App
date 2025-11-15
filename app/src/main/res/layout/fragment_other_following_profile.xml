@@ -50,6 +50,7 @@
         android:layout_marginTop="16dp">
 
         <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/other_profile_image"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:src="@drawable/person3" />
@@ -62,9 +63,9 @@
             android:gravity="center"
             android:layout_marginStart="16dp">
 
-            <TextView style="@style/ProfileStatsText" android:text="@string/profile_posts" />
-            <TextView style="@style/ProfileStatsText" android:text="@string/profile_followers" />
-            <TextView style="@style/ProfileStatsText" android:text="@string/profile_following" />
+            <TextView android:id="@+id/other_posts_count" style="@style/ProfileStatsText" android:text="@string/profile_posts" />
+            <TextView android:id="@+id/other_followers_count" style="@style/ProfileStatsText" android:text="@string/profile_followers" />
+            <TextView android:id="@+id/other_following_count" style="@style/ProfileStatsText" android:text="@string/profile_following" />
         </LinearLayout>
     </LinearLayout>
 
@@ -75,9 +76,9 @@
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="8dp">
 
-        <TextView style="@style/ProfileName" android:text="@string/profile_name" />
-        <TextView style="@style/ProfileDescription" android:text="@string/profile_bio" />
-        <TextView style="@style/ProfileWebsite" android:text="@string/profile_website" />
+        <TextView android:id="@+id/other_profile_name" style="@style/ProfileName" android:text="@string/profile_name" />
+        <TextView android:id="@+id/other_profile_bio" style="@style/ProfileDescription" android:text="@string/profile_bio" />
+        <TextView android:id="@+id/other_profile_website" style="@style/ProfileWebsite" android:text="@string/profile_website" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -102,6 +103,7 @@
             app:backgroundTint="@null" />
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/message_button"
             style="@style/ProfileActionButton"
             android:text="@string/message_button"
             app:backgroundTint="@null" />
@@ -194,41 +196,13 @@
             app:tint="@color/gray" />
     </LinearLayout>
 
-    <ScrollView
+    <!-- RecyclerView for user's posts -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/other_profile_posts_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:layout_marginTop="4dp"
-        android:scrollbars="none">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <LinearLayout style="@style/GridRow">
-                <ImageView style="@style/GridImageItem" android:src="@drawable/exp16" />
-                <ImageView style="@style/GridImageItem" android:src="@drawable/exp13" />
-                <ImageView style="@style/GridImageItem" android:src="@drawable/exp17" />
-            </LinearLayout>
-
-            <LinearLayout style="@style/GridRow">
-                <ImageView style="@style/GridImageItem" android:src="@drawable/exp18" />
-                <FrameLayout style="@style/GridImageItem.Frame">
-                    <ImageView style="@style/GridImageItem.Inner" android:src="@drawable/exp11" />
-                    <ImageView style="@style/GridImageItem.Overlay" android:src="@drawable/highlight_slides" />
-                </FrameLayout>
-                <ImageView style="@style/GridImageItem" android:src="@drawable/exp20" />
-            </LinearLayout>
-
-            <LinearLayout style="@style/GridRow">
-                <ImageView style="@style/GridImageItem" android:src="@drawable/exp15" />
-                <ImageView style="@style/GridImageItem" android:src="@drawable/exp10" />
-                <ImageView style="@style/GridImageItem" android:src="@drawable/exp19" />
-            </LinearLayout>
-
-
-        </LinearLayout>
-    </ScrollView>
+        android:scrollbars="none" />
 
 </LinearLayout>

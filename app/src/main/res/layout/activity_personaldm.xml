@@ -25,20 +25,36 @@
             app:tint="@color/text_color" />
 
         <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/chat_profile_image"
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:layout_marginStart="16dp"
             android:src="@drawable/person1" />
 
-        <TextView
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginStart="8dp"
-            android:text="@string/karennne"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="@color/black" />
+            android:orientation="vertical">
+            
+            <TextView
+                android:id="@+id/username_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/karennne"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+            
+            <TextView
+                android:id="@+id/online_status_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Offline"
+                android:textSize="12sp"
+                android:textColor="@color/gray" />
+        </LinearLayout>
 
         <ImageView
             android:layout_width="30dp"
@@ -57,53 +73,16 @@
             app:tint="@color/text_color" />
     </LinearLayout>
 
-    <ScrollView
+    <!-- RecyclerView for messages -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/messages_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:paddingHorizontal="16dp"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="8dp"
         android:scrollbars="none"
-        android:fillViewport="true">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="bottom"
-            android:paddingTop="32dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/message_time"
-                android:textColor="@color/gray"
-                android:textSize="12sp"
-                android:layout_gravity="center_horizontal" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:background="@drawable/message_bubble_background"
-                android:text="@string/hello_message"
-                android:textColor="@color/white"
-                android:paddingHorizontal="16dp"
-                android:paddingVertical="8dp"
-                android:layout_marginTop="16dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:background="@drawable/message_bubble_background"
-                android:text="How are you?"
-                android:textColor="@color/white"
-                android:paddingHorizontal="16dp"
-                android:paddingVertical="8dp"
-                android:layout_marginTop="16dp" />
-
-        </LinearLayout>
-    </ScrollView>
+        android:clipToPadding="false" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -150,19 +129,22 @@
             android:layout_width="28dp"
             android:layout_height="28dp"
             android:src="@drawable/picture"
-            android:layout_toStartOf="@id/smiley_icon"
+            android:layout_toStartOf="@id/send_button"
             android:layout_centerVertical="true"
             android:layout_marginEnd="16dp"
             app:tint="@color/text_color" />
 
         <ImageView
-            android:id="@+id/smiley_icon"
-            android:layout_width="28dp"
-            android:layout_height="28dp"
-            android:src="@drawable/stickers"
+            android:id="@+id/send_button"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/send"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            app:tint="@color/text_color" />
+            android:padding="4dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:tint="@color/text_color"
+            android:contentDescription="Send message" />
     </RelativeLayout>
 
 </LinearLayout>

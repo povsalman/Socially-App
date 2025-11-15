@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center"
+    android:background="@android:color/white">
+
+    <!-- Caller profile image -->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/caller_profile_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/person1" />
+
+    <!-- Caller name -->
+    <TextView
+        android:id="@+id/caller_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Caller Name"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black" />
+
+    <!-- Call status text -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Incoming video call..."
+        android:textSize="14sp"
+        android:textColor="@color/gray" />
+
+    <!-- Action buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- Decline button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/decline_call_button"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:text="Decline"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            app:icon="@drawable/endcall"
+            app:iconGravity="textStart"
+            app:iconTint="@color/white"
+            app:backgroundTint="@android:color/holo_red_dark"
+            app:cornerRadius="12dp" />
+
+        <!-- Accept button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/accept_call_button"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="Accept"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            app:icon="@drawable/video"
+            app:iconGravity="textStart"
+            app:iconTint="@color/white"
+            app:backgroundTint="@android:color/holo_green_dark"
+            app:cornerRadius="12dp" />
+    </LinearLayout>
+</LinearLayout>
+

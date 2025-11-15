@@ -54,75 +54,51 @@
             app:tint="@color/text_color" />
     </LinearLayout>
 
-    <!-- Stories -->
-
-    <HorizontalScrollView
+    <!-- Stories Section -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
         android:paddingVertical="8dp"
-        android:scrollbars="none">
+        android:paddingStart="16dp"
+        android:paddingEnd="0dp"
+        android:gravity="center_vertical">
 
-        <!-- Your Story -->
-
+        <!-- Your Story (Add Story Button) -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:paddingHorizontal="16dp">
-
-            <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginEnd="16dp">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/you"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/jacob_img"
+                android:contentDescription="add_story"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?android:attr/selectableItemBackgroundBorderless" />
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center_horizontal"
-                android:layout_marginEnd="16dp">
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/you"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:src="@drawable/jacob_img"
-                    android:contentDescription="add_story" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="@string/your_story"
-                    android:textSize="12sp"
-                    android:textColor="@color/gray" />
-            </LinearLayout>
-
-            <!-- Other stories ... -->
-
-            <LinearLayout style="@style/StoryItem" android:layout_marginEnd="16dp">
-                <de.hdodenhof.circleimageview.CircleImageView
-                    style="@style/StoryImage"
-                    app:civ_border_color="@color/story_border_start"
-                    android:src="@drawable/person1"
-                    />
-                <TextView style="@style/StoryText" android:text="@string/karennne" />
-            </LinearLayout>
-            <LinearLayout style="@style/StoryItem" android:layout_marginEnd="16dp">
-                <de.hdodenhof.circleimageview.CircleImageView
-                    style="@style/StoryImage" app:civ_border_color="@color/story_border_end"
-                    android:src="@drawable/person2" />
-                <TextView style="@style/StoryText" android:text="@string/zackjohn" />
-            </LinearLayout>
-            <LinearLayout style="@style/StoryItem" android:layout_marginEnd="16dp">
-                <de.hdodenhof.circleimageview.CircleImageView
-                    style="@style/StoryImage" app:civ_border_color="@color/story_border_start"
-                    android:src="@drawable/person3" />
-                <TextView style="@style/StoryText" android:text="@string/kieron_d" />
-            </LinearLayout>
-            <LinearLayout style="@style/StoryItem">
-                <de.hdodenhof.circleimageview.CircleImageView
-                    style="@style/StoryImage" app:civ_border_color="@color/story_border_end"
-                    android:src="@drawable/person4" />
-                <TextView style="@style/StoryText" android:text="@string/craig_d" />
-            </LinearLayout>
-
+                android:layout_marginTop="4dp"
+                android:text="@string/your_story"
+                android:textSize="12sp"
+                android:textColor="@color/gray" />
         </LinearLayout>
-    </HorizontalScrollView>
+
+        <!-- Dynamic Stories RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/stories_recycler_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingEnd="16dp"
+            android:scrollbars="none" />
+
+    </LinearLayout>
 
     <!-- Divider -->
     <View
@@ -132,39 +108,11 @@
         />
 
     <!-- Posts Section -->
-    <ScrollView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/posts_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:scrollbars="none">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <!-- Post 1 -->
-            <include layout="@layout/item_post" />
-
-            <!-- Divider -->
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.6dp"
-                android:layout_marginVertical="10dp" />
-
-            <!-- Post 2 -->
-            <include layout="@layout/item_post2" />
-
-            <!-- Divider -->
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.6dp"
-                android:layout_marginVertical="10dp" />
-
-            <!-- Post 3 -->
-            <include layout="@layout/item_post" />
-
-        </LinearLayout>
-    </ScrollView>
+        android:scrollbars="none" />
 
 </LinearLayout>

@@ -55,11 +55,13 @@
             android:gravity="center_horizontal">
 
             <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_picture"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:src="@drawable/jacob_img" />
 
             <TextView
+                android:id="@+id/change_photo_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -71,22 +73,22 @@
             <LinearLayout style="@style/ProfileSection">
                 <LinearLayout style="@style/EditProfileItem">
                     <TextView style="@style/EditProfileLabel" android:text="@string/name_label" />
-                    <TextView style="@style/EditProfileValue" android:text="@string/name_value" />
+                    <TextView android:id="@+id/name_value" style="@style/EditProfileValue" android:text="@string/name_value" />
                 </LinearLayout>
                 <View style="@style/EditProfileSeparator" />
                 <LinearLayout style="@style/EditProfileItem">
                     <TextView style="@style/EditProfileLabel" android:text="@string/username_label" />
-                    <TextView style="@style/EditProfileValue" android:text="@string/username_value" />
+                    <TextView android:id="@+id/username_value" style="@style/EditProfileValue" android:text="@string/username_value" />
                 </LinearLayout>
                 <View style="@style/EditProfileSeparator" />
                 <LinearLayout style="@style/EditProfileItem">
                     <TextView style="@style/EditProfileLabel" android:text="@string/website_label" />
-                    <TextView style="@style/EditProfileValue" android:text="@string/website_hint" android:textColor="@color/gray" />
+                    <TextView android:id="@+id/website_value" style="@style/EditProfileValue" android:text="@string/website_hint" android:textColor="@color/gray" />
                 </LinearLayout>
                 <View style="@style/EditProfileSeparator" />
                 <LinearLayout style="@style/EditProfileItem">
                     <TextView style="@style/EditProfileLabel" android:text="@string/bio_label" />
-                    <TextView style="@style/EditProfileValue" android:text="@string/bio_value" android:textColor="@color/gray" />
+                    <TextView android:id="@+id/bio_value" style="@style/EditProfileValue" android:text="@string/bio_value" android:textColor="@color/gray" />
                 </LinearLayout>
                 <View style="@style/EditProfileSeparator" />
             </LinearLayout>
@@ -112,17 +114,17 @@
             <LinearLayout style="@style/ProfileSection">
                 <LinearLayout style="@style/EditProfileItem">
                     <TextView style="@style/EditProfileLabel" android:text="@string/email_label" />
-                    <TextView style="@style/EditProfileValue" android:text="@string/email_value" />
+                    <TextView android:id="@+id/email_value" style="@style/EditProfileValue" android:text="@string/email_value" />
                 </LinearLayout>
                 <View style="@style/EditProfileSeparator" />
                 <LinearLayout style="@style/EditProfileItem">
                     <TextView style="@style/EditProfileLabel" android:text="@string/phone_label" />
-                    <TextView style="@style/EditProfileValue" android:text="@string/phone_value" />
+                    <TextView android:id="@+id/phone_value" style="@style/EditProfileValue" android:text="@string/phone_value" />
                 </LinearLayout>
                 <View style="@style/EditProfileSeparator" />
                 <LinearLayout style="@style/EditProfileItem">
                     <TextView style="@style/EditProfileLabel" android:text="@string/gender_label" />
-                    <TextView style="@style/EditProfileValue" android:text="@string/gender_value" />
+                    <TextView android:id="@+id/gender_value" style="@style/EditProfileValue" android:text="@string/gender_value" />
                 </LinearLayout>
                 <View style="@style/EditProfileSeparator" />
             </LinearLayout>

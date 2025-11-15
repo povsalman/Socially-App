@@ -25,10 +25,11 @@
             app:tint="@color/text_color" />
 
         <TextView
+            android:id="@+id/dm_header_username"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/username"
+            android:text="Direct Messages"
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@color/text_color"
@@ -68,82 +69,40 @@
             android:textColorHint="@color/dm_subtitle_color" />
     </LinearLayout>
 
-    <ScrollView
+    <!-- RecyclerView for chats -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chats_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:layout_marginTop="8dp"
-        android:scrollbars="none">
+        android:scrollbars="none" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
+    <!-- Empty State -->
+    <LinearLayout
+        android:id="@+id/empty_state"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:text="No messages yet"
+            android:textColor="@color/gray"
+            android:textSize="16sp" />
 
-            <LinearLayout style="@style/DMItem" android:id="@+id/first_dm_item">
-                <de.hdodenhof.circleimageview.CircleImageView style="@style/DMImage" android:src="@drawable/person2" />
-                <LinearLayout style="@style/DMTextContainer">
-                    <TextView style="@style/DMTitle" android:text="@string/joshua_l" />
-                    <TextView style="@style/DMSubtitle" android:text="@string/joshua_l_message" />
-                </LinearLayout>
-                <TextView style="@style/DMTime" android:text="@string/message_time_now" />
-                <ImageView style="@style/DMCameraIcon" android:src="@drawable/camera" />
-            </LinearLayout>
-
-            <LinearLayout style="@style/DMItem">
-                <de.hdodenhof.circleimageview.CircleImageView style="@style/DMImage" android:src="@drawable/person1" />
-                <LinearLayout style="@style/DMTextContainer">
-                    <TextView style="@style/DMTitle" android:text="@string/karennne" />
-                    <TextView style="@style/DMSubtitle" android:text="@string/karennne_message" />
-                </LinearLayout>
-                <TextView style="@style/DMTime" android:text="@string/message_time_now" />
-                <ImageView style="@style/DMCameraIcon" android:src="@drawable/camera" />
-            </LinearLayout>
-
-            <LinearLayout style="@style/DMItem">
-                <de.hdodenhof.circleimageview.CircleImageView style="@style/DMImage" android:src="@drawable/person4" />
-                <LinearLayout style="@style/DMTextContainer">
-                    <TextView style="@style/DMTitle" android:text="@string/martini_rond" />
-                    <TextView style="@style/DMSubtitle" android:text="@string/martini_message" />
-                </LinearLayout>
-                <TextView style="@style/DMTime" android:text="@string/message_time_15m" />
-                <ImageView style="@style/DMCameraIcon" android:src="@drawable/camera" />
-            </LinearLayout>
-
-            <LinearLayout style="@style/DMItem">
-                <de.hdodenhof.circleimageview.CircleImageView style="@style/DMImage" android:src="@drawable/person5" />
-                <LinearLayout style="@style/DMTextContainer">
-                    <TextView style="@style/DMTitle" android:text="qaidino804" />
-                    <TextView style="@style/DMSubtitle" android:text="These hoes aint loyal" />
-                </LinearLayout>
-                <TextView style="@style/DMTime" android:text="1hr ago" />
-                <ImageView style="@style/DMCameraIcon" android:src="@drawable/camera" />
-            </LinearLayout>
-
-            <LinearLayout style="@style/DMItem">
-                <de.hdodenhof.circleimageview.CircleImageView style="@style/DMImage" android:src="@drawable/person6" />
-                <LinearLayout style="@style/DMTextContainer">
-                    <TextView style="@style/DMTitle" android:text="lisa" />
-                    <TextView style="@style/DMSubtitle" android:text="Liked your message" />
-                </LinearLayout>
-                <TextView style="@style/DMTime" android:text="68w ago" />
-                <ImageView style="@style/DMCameraIcon" android:src="@drawable/camera" />
-            </LinearLayout>
-
-            <LinearLayout style="@style/DMItem">
-                <de.hdodenhof.circleimageview.CircleImageView style="@style/DMImage" android:src="@drawable/person7" />
-                <LinearLayout style="@style/DMTextContainer">
-                    <TextView style="@style/DMTitle" android:text="e3quals_mc2" />
-                    <TextView style="@style/DMSubtitle" android:text="Wanna hop on Fortnite?" />
-                </LinearLayout>
-                <TextView style="@style/DMTime" android:text="12yr ago" />
-                <ImageView style="@style/DMCameraIcon" android:src="@drawable/camera" />
-            </LinearLayout>
-
-
-
-        </LinearLayout>
-    </ScrollView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Start a conversation with your followers"
+            android:textColor="@color/gray"
+            android:textSize="14sp" />
+    </LinearLayout>
 
     <!-- Material 3 Camera Button -->
     <LinearLayout

@@ -52,8 +52,53 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun loadFragment(fragment: Fragment) {
+        // Clear back stack when switching between bottom nav items
+        supportFragmentManager.popBackStack(null, androidx.fragment.app.FragmentManager.POP_BACK_STACK_INCLUSIVE)
+        
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragment_container, fragment)
             .commit()
+    }
+
+    @Deprecated("Deprecated in Java")
+    override fun onBackPressed() {
+        // If there are fragments in back stack, pop them
+        if (supportFragmentManager.backStackEntryCount > 0) {
+            supportFragmentManager.popBackStack()
+        } else {
+            // If we're at a root fragment, ask before exiting
+            showExitConfirmation()
+        }
+    }
+
+    private fun showExitConfirmation() {
+        val builder = android.app.AlertDialog.Builder(this)
+        builder.setTitle("Exit App")
+        builder.setMessage("Do you want to exit the app?")
+        
+        builder.setPositiveButton("Yes") { dialog, _ ->
+            finish()
+            dialog.dismiss()
+        }
+        
+        builder.setNegativeButton("No") { dialog, _ ->
+            dialog.dismiss()
+        }
+        
+        builder.show()
+    }
+    
+    override fun onResume() {
+        super.onResume()
+        // Set user as online
+        val userId = com.salmankhan.i221285.AuthService.currentUser()?.uid
+        userId?.let { com.salmankhan.i221285.services.PresenceService.setUserOnline(it) }
+    }
+    
+    override fun onPause() {
+        super.onPause()
+        // Set user as offline
+        val userId = com.salmankhan.i221285.AuthService.currentUser()?.uid
+        userId?.let { com.salmankhan.i221285.services.PresenceService.setUserOffline(it) }
     }
 }
