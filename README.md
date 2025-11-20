@@ -104,7 +104,7 @@ app/
 ├── utils/              # Helpers, extensions, constants
 ├── viewmodel/          # MVVM ViewModels
 
-````
+```
 
 ---
 
@@ -113,7 +113,7 @@ app/
 1. Clone the repository:
    ```bash
    git clone https://github.com/<your-repo>/socially.git
-````
+  
 
 2. Open the project in **Android Studio**.
 
@@ -134,18 +134,6 @@ app/
 
 ---
 
-## **📸 Screenshots (Optional)**
-
-You may add screenshots of:
-
-* Login
-* Feed
-* Profile
-* Chat
-* Stories
-
----
-
 ## **📝 Assignment Notes**
 
 This project demonstrates:
@@ -158,6 +146,4 @@ This project demonstrates:
 
 ---
 
-```
-```
 
