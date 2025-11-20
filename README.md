@@ -1,7 +1,7 @@
 # **Socially – Android Social Networking App**
 
 Socially is a full-featured social networking Android application built using **Kotlin** and **Firebase**.  
-The project demonstrates modern mobile-app development practices and implements essential social-media features such as user authentication, posting, following, real-time interactions, and messaging.
+The project demonstrates modern mobile-app development practices and implements essential social-media features such as user authentication, posting, following, real-time interactions, and messaging
 
 ---
 
@@ -103,6 +103,7 @@ app/
 │
 ├── utils/              # Helpers, extensions, constants
 ├── viewmodel/          # MVVM ViewModels
+etc
 
 ```
 
