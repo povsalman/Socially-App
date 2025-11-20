@@ -17,6 +17,7 @@
         android:background="@color/white">
 
         <TextView
+            android:id="@+id/cancel_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/cancel_button"
@@ -46,6 +47,7 @@
             android:layout_weight="1" />
 
         <TextView
+            android:id="@+id/next_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/next_button"
@@ -62,6 +64,7 @@
         android:background="@color/black">
 
         <ImageView
+            android:id="@+id/post_preview_image"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
@@ -69,6 +72,7 @@
             android:contentDescription="Main preview image" />
 
         <TextView
+            android:id="@+id/select_multiple_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
@@ -134,13 +138,17 @@
             android:gravity="center" />
 
         <TextView
+            android:id="@+id/photo_button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/photo_label"
             android:textColor="@color/text_color"
             android:textSize="20dp"
-            android:gravity="center" />
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:attr/selectableItemBackground" />
 
         <TextView
             android:layout_width="0dp"

@@ -1,6 +1,13 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <style name="Theme.I221285" parent="Base.Theme.I221285" />
+    <style name="Theme.I221285" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your light theme here if needed -->
+    </style>
+
+    <!-- Define the base theme for day/default resources to match night variant -->
+    <style name="Base.Theme.I221285" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your light theme here if needed -->
+    </style>
 
     <!-- Reusable styles -->
     <style name="PostActionIcon">
@@ -32,7 +39,7 @@
         <item name="android:textColor">@color/gray</item>
     </style>
 
-    <style name="CustomBottomNav" parent="Widget.Material3.BottomNavigationView">
+    <style name="CustomBottomNav" parent="Widget.MaterialComponents.BottomNavigationView">
         <item name="android:layout_height">48dp</item>
         <item name="itemIconSize">28dp</item>
         <item name="itemPaddingTop">0dp</item>

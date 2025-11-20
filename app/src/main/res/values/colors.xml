@@ -44,5 +44,8 @@
 
     <color name="socially_dark">#444444</color>
     <color name="socially_dark_red">#9B5E63</color>
+    
+    <color name="blue">#0095F6</color>
+    <color name="gray_light">#E0E0E0</color>
 
 </resources>

@@ -90,7 +90,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="tejpatil064"
             android:textColor="@color/white"
             android:textColorHint="@color/text_input_hint" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -113,7 +112,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="Tejas"
             android:textColor="@color/white"
             android:textColorHint="@color/text_input_hint" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -136,7 +134,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="Patil"
             android:textColor="@color/white"
             android:textColorHint="@color/text_input_hint" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -159,7 +156,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="date"
-            android:text="02 - 09 - 2003"
             android:textColor="@color/white"
             android:textColorHint="@color/text_input_hint" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -182,7 +178,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
-            android:text="Enter E-mail"
             android:textColor="@color/white"
             android:textColorHint="@color/text_input_hint" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -207,7 +202,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
-            android:text="*********"
             android:textColor="@color/white"
             android:textColorHint="@color/text_input_hint" />
     </com.google.android.material.textfield.TextInputLayout>

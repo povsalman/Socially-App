@@ -46,157 +46,32 @@
             android:gravity="center_horizontal" />
     </LinearLayout>
 
-    <ScrollView
+    <!-- RecyclerView for follow requests -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/follow_requests_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:scrollbars="none"
-        android:paddingHorizontal="16dp"
-        android:paddingVertical="8dp">
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="8dp"
+        android:scrollbars="none" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
+    <!-- Empty State -->
+    <LinearLayout
+        android:id="@+id/empty_state"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:text="No follow requests"
+            android:textColor="@color/gray"
+            android:textSize="16sp" />
+    </LinearLayout>
 
-            <LinearLayout style="@style/NotificationItem">
-                <de.hdodenhof.circleimageview.CircleImageView style="@style/NotificationImage" android:src="@drawable/person1" />
-                <LinearLayout style="@style/NotificationTextContainer">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:textColor="@color/black"
-                        android:text="@string/karennne" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/liked_posts"
-                        android:textColor="@color/black" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/time_3h"
-                        android:textColor="@color/gray" />
-                </LinearLayout>
-                <LinearLayout style="@style/NotificationThumbnailsContainer">
-                    <ImageView style="@style/NotificationThumbnail" android:src="@drawable/exp2" />
-                    <ImageView style="@style/NotificationThumbnail" android:src="@drawable/exp4" />
-                    <ImageView style="@style/NotificationThumbnail" android:src="@drawable/exp5" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout style="@style/NotificationItem">
-                <de.hdodenhof.circleimageview.CircleImageView style="@style/NotificationImage" android:src="@drawable/person4" />
-                <LinearLayout style="@style/NotificationTextContainer">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:textColor="@color/black"
-                        android:text="@string/kieron_d" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/started_following"
-                        android:textColor="@color/black" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/time_3h"
-                        android:textColor="@color/gray" />
-                </LinearLayout>
-                <ImageView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:layout_marginStart="8dp"
-                    android:src="@drawable/exp11"
-                    android:scaleType="centerCrop" />
-            </LinearLayout>
-
-            <!-- Additional Rows -->
-            <LinearLayout style="@style/NotificationItem">
-                <de.hdodenhof.circleimageview.CircleImageView style="@style/NotificationImage" android:src="@drawable/person2" />
-                <LinearLayout style="@style/NotificationTextContainer">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:textColor="@color/black"
-                        android:text="@string/joshua_l" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/commented_post"
-                        android:textColor="@color/black" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/time_1h"
-                        android:textColor="@color/gray" />
-                </LinearLayout>
-                <LinearLayout style="@style/NotificationThumbnailsContainer">
-                    <ImageView style="@style/NotificationThumbnail" android:src="@drawable/exp1" />
-                    <ImageView style="@style/NotificationThumbnail" android:src="@drawable/exp3" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout style="@style/NotificationItem">
-                <de.hdodenhof.circleimageview.CircleImageView style="@style/NotificationImage" android:src="@drawable/person5" />
-                <LinearLayout style="@style/NotificationTextContainer">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:textColor="@color/black"
-                        android:text="qaidino804" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/shared_story"
-                        android:textColor="@color/black" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/time_6h"
-                        android:textColor="@color/gray" />
-                </LinearLayout>
-                <ImageView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:layout_marginStart="8dp"
-                    android:src="@drawable/exp6"
-                    android:scaleType="centerCrop" />
-            </LinearLayout>
-
-            <LinearLayout style="@style/NotificationItem">
-                <de.hdodenhof.circleimageview.CircleImageView style="@style/NotificationImage" android:src="@drawable/person6" />
-                <LinearLayout style="@style/NotificationTextContainer">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:textColor="@color/black"
-                        android:text="lisa" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/sent_message"
-                        android:textColor="@color/black" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/time_12h"
-                        android:textColor="@color/gray" />
-                </LinearLayout>
-                <ImageView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:layout_marginStart="8dp"
-                    android:src="@drawable/exp7"
-                    android:scaleType="centerCrop" />
-            </LinearLayout>
-
-        </LinearLayout>
-    </ScrollView>
 </LinearLayout>

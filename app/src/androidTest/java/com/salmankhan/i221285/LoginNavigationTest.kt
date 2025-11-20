@@ -23,7 +23,7 @@ class LoginNavigationTest {
         // Click "Log In" button to navigate to LoginActivity
         onView(withId(R.id.log_in_button)).perform(click())
 
-        // Verify LoginActivity is displayed (check for a visible element, e.g., log_in_button2)
-        onView(withId(R.id.log_in_button2)).check(matches(isDisplayed()))
+        // Verify LoginActivity is displayed (check for the login button)
+        onView(withId(R.id.loginButton)).check(matches(isDisplayed()))
     }
 }
